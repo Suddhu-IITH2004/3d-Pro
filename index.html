@@ -270,7 +270,7 @@
               } else {
                 model.visible = false;
                 imagePlane.visible = true;
-                controls.enableRotate = false;
+                controls.enableRotate = true;
                 imagePlane.position.set(0, 0, 0);
                 //imagePlane.rotation.y =controls.getAzimuthalAngle();
               }
@@ -283,7 +283,7 @@
               } else {
                 model.visible = false;
                 imagePlane.visible = true;
-                controls.enableRotate = false;
+                controls.enableRotate = true;
                 //imagePlane.rotation.y =controls.getAzimuthalAngle();
               }
             }
@@ -329,11 +329,9 @@
 
       // Listen for the 'change' event
       controls.addEventListener("change", function () {
-        if (model.visible) {
           if (!zoom1) {
             updateImageTexture();
           }
-        }
       });
 
       // Function to update the imageTexture based on the current azimuthal angle

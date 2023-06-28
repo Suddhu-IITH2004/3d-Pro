@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>3D Model and Image Display</title>
+    <link rel="preload"  href="outs/" as="image">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
       body {
@@ -389,13 +390,6 @@
       var offScreenRenderer = new THREE.WebGLRenderer({ alpha: true });
       function getImage() {
         angle = controls.getAzimuthalAngle();
-        // >>> for i in range(len(b)):
-        // ...     if b[i] <= 0:
-        // ...             print(f"}} else if (angle >= {start} && angle < {b[i]}) {{\n", f"    imagePlane.rotation.y = {b[i]};\n", f'    return "outs/6_{i:03d}.png";')
-        // ...             start = b[i]
-        // ...     if b[i] > 0:
-        // ...             print(f"}} else if (angle <= {b[i]} && angle > {start}) {{\n", f"    imagePlane.rotation.y = {start};\n", f'    return "outs/6_{i-1:03d}.png";')
-        // ...             start = b[i]
         // ... Python Code generater for the below inference block::::
         if (angle >= -0.6 && angle < -0.57) {
           imagePlane.rotation.y = -0.57;
